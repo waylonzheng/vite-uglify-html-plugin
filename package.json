@@ -1,11 +1,16 @@
 {
   "name": "@waylonzheng/vite-uglify-html-plugin",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A Vite plugin that can compress HTML files.",
+  "keywords": ["vite", "plugin", "compress", "html"],
   "main": "lib/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development  rollup -c -w",
     "build": "cross-env NODE_ENV=produaction  rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:waylonzheng/vite-uglify-html-plugin.git"
   },
   "type": "module",
   "author": "waylonzheng",

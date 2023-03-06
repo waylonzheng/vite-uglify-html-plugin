@@ -5,7 +5,11 @@ const uglifyHtmlPlugin = () => {
         transformIndexHtml(html: string) {
             const replaceObj = new Clear(html);
             // 构建者模式
-            replaceObj.clear(/[\r\n]*/g).clear(/<!--[\w\W\r\n]*?-->/gmi);
+            replaceObj
+                // 去除 空格换行符
+                .clear(/[\r\n\s]*/g)
+                // 去除 注释
+                .clear(/<!--[\w\W\r\n]*?-->/gmi);
             return replaceObj.htmlStr;
         },
     };

@@ -8,7 +8,7 @@ export class Clear {
             return this;
         }
         this.htmlStr = this.htmlStr.replace(reg, '');
-        // 每次清除完毕后将this放回, 供下一次清除其他目标
+        // 每次清除完毕后将this返回, 供下一次清除其他目标
         return this;
     };
     replace(reg:RegExp, text:string) {
@@ -16,7 +16,7 @@ export class Clear {
             return this;
         }
         this.htmlStr = this.htmlStr.replace(reg, text);
-        // 每次清除完毕后将this放回, 供下一次清除其他目标
+        // 每次清除完毕后将this返回, 供下一次清除其他目标
         return this;
     }
 }
